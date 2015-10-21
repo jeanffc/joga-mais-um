@@ -6,3 +6,4 @@ MyAdmin.setup do |config|
 end
 
 MyAdmin::Application.add([MyAdmin::Group, MyAdmin::Log, MyAdmin::User])
+MyAdmin::Application.add([Sport])

@@ -2,13 +2,50 @@
 <html>
 <head>
   <title>JogaMaisUm</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= yield(:head) %>
 </head>
 <body>
 
-<%= yield %>
+	<header>
+		<nav class="navbar">
+			<div class="container-fluid">
+				<%= render 'layouts/navigation' %>
+			</div>
+		</nav>
+	</header>
+	
+	<section id="main" role="main">
+		<div class="container">
+			<div class="content c1">
+				<div class="row">
+					<div class="span12">
+						<%= yield %>
+					</div>
+				</div>
+			</div>
+		</div> <!--! end of .container -->
+	</section> <!--! end of #main -->
+
+	<footer>
+	  <div class="container">
+	    <div class="content">
+				<div class="row">
+					<div class="span12">
+						Desenvolvido por:
+					</div>
+				</div>
+			</div>
+	  </div>
+	</footer>
 
 </body>
 </html>

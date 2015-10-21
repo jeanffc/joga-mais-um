@@ -1,0 +1,20 @@
+<div class="pull-left">
+  Joga +1
+</div>
+<div class="pull-right">
+  <a href="">Como funciona</a>
+  <a href="">Dúvidas</a>
+  <a href="">Sobre</a>
+  <% if profile_signed_in? %>
+    <%= link_to('Sair', destroy_profile_session_path, :method=>'delete') %>        
+  <% else %>
+    <%= link_to('Login', new_profile_session_path)  %>  
+  <% end %>
+  <!--
+  <% if profile_signed_in? %>
+    <%= link_to('Editar', edit_profile_registration_path) %>
+  <% else %>
+    <%= link_to('Cadastrar', new_profile_registration_path)  %>
+  <% end %>
+  -->
+</div>
